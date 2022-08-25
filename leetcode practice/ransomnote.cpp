@@ -16,20 +16,25 @@
 class Solution {
     
     
+
 public:
-   
-        bool canConstruct(string ransomNote, string magazine) {
+    bool canConstruct(string ransomNote, string magazine) {
+        //ransomeNote can be constructed from magazine if magazine contains all the letter used in making ransomeNote
+        unordered_map<char, int> m;
         
-        int count[26] = {0};
-        for(char ch : magazine)
-            count[ch - 'a']++;
+        //store all the char of magazine so that it can be searched easily
+        for(auto x: magazine){
+            m[x]++;
+        }
         
-        for(char ch : ransomNote)
-            if(count[ch - 'a']-- <= 0)
+		//iterate ransomeNote 
+        for(auto x: ransomNote){
+		//magazine  have this char of ransomeNote, used once, decrease frequency
+		// when hit's zero return false.(we r using post decrement)
+            if(!m[x]--){
                 return false;
-        
+            }
+        }
         return true;
-    
-        
     }
 };
