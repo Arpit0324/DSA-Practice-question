@@ -1,4 +1,10 @@
-//We divide the array into parts. It is done using two pointers, low and high, and dividing the range between them by 2. This gives the midpoint of the range. Check if the target is present in the midpoint, calculated before, of the array. If not present, check if the left half of the array is sorted. This implies that binary search can be applied in the left half of the array provided the target lies between the value range. Else check into the right half of the array. Repeat the above steps until low <= high. If low > high, indicates we have searched array and target is not present hence return -1. Thus, it makes search operations less as we check range first then perform searching in possible ranges which may have target value.
+//We divide the array into parts. It is done using two pointers, low and high, and dividing the range between them by 2.
+//This gives the midpoint of the range. Check if the target is present in the midpoint, calculated before, of the array.
+//If not present, check if the left half of the array is sorted. 
+//This implies that binary search can be applied in the left half of the array provided the target lies between the value range. 
+//Else check into the right half of the array. Repeat the above steps until low <= high. 
+//If low > high, indicates we have searched array and target is not present hence return -1.
+//Thus, it makes search operations less as we check range first then perform searching in possible ranges which may have target value.
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -36,7 +42,7 @@ int main() {
 
 //Time Complexity: O(log(N))
 
-//g a binary search, this turns time complexity to O(log(N)) where N is the size of the array.
+//Reason: We are performing a binary search, this turns time complexity to O(log(N)) where N is the size of the array.
 
 //Space Complexity: O(1)
 
