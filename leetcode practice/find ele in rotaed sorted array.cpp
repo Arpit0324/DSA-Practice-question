@@ -1,3 +1,11 @@
+// Q)  Problem Statement: There is an integer array nums sorted in ascending order (with distinct values). 
+//Given the array nums after the possible clockwise rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums. 
+//We need to search a given element in a rotated sorted array.
+
+
+
+
+
 //We divide the array into parts. It is done using two pointers, low and high, and dividing the range between them by 2.
 //This gives the midpoint of the range. Check if the target is present in the midpoint, calculated before, of the array.
 //If not present, check if the left half of the array is sorted. 
