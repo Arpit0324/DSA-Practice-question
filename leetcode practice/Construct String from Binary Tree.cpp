@@ -36,9 +36,9 @@ public:
         if(!root)
             return "";
         string s= to_string(root->val);
-        if(root->left) s+="(" + tree2str(root->left) +")"; 
+        if(root->left) s+="(" + tree2str(root->left) +")"; // It is for left subtree
         else if(root->right) s+="()"; // we created parenthesis for left, when it doesnt exist 
-        if(root->right) s+="(" + tree2str(root->right) +")";
+        if(root->right) s+="(" + tree2str(root->right) +")"; // It is right subtree
         return s;
     }
 };
