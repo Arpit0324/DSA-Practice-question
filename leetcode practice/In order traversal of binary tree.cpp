@@ -22,3 +22,22 @@ public:
         return ans;
     }
 };
+
+//Approach: (DFS Traversal)
+
+//Inorder Traversal follows - Left Root Right
+//If root==NULL we can simply return {};
+//we declare a vector vec and simply push all the root->val after every left traversal and after that right traversal happens.
+
+class Solution {
+public:
+    vector<int> vec; 
+    vector<int> inorderTraversal(TreeNode* root) {
+        if(root==NULL)
+            return {};
+        inorderTraversal(root->left);
+        vec.push_back(root->val);
+        inorderTraversal(root->right);
+        return vec;
+    }
+};
