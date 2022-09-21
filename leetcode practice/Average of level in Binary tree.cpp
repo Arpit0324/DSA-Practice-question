@@ -1,10 +1,14 @@
-// Q) Given the root of a binary tree, return the average value of the nodes on each level in the form of an array. Answers within 10-5 of the actual answer will be accepted.
+// Q) Given the root of a binary tree, return the average value of the nodes on each level in the form of an array. 
+//Answers within 10-5 of the actual answer will be accepted.
 
 
 
-/// We can directly do a Breadth-First search, which would be more intuitive and efficient than DFS, since we are concerned with each levels of the binary Tree(exactly what BFS achieves).
+/// We can directly do a Breadth-First search, which would be more intuitive and efficient than DFS, 
+//since we are concerned with each levels of the binary Tree(exactly what BFS achieves).
 
-///As in any BFS, we use a simple queue, iterate nodes at each row & push their children to queue after popping the current node. For each row, sum of all node's value at that level of the binary tree would be calculated and the average would be stored in ans array which will be our final answer.
+///As in any BFS, we use a simple queue, iterate nodes at each row & push their children to queue after popping the current node. 
+//For each row, sum of all node's value at that level of the binary tree would be calculated and the average would be stored in ans array 
+//which will be our final answer.
 
 
 
