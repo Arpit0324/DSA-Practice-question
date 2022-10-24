@@ -5,21 +5,26 @@
 //Keep the above steps until cur is null and stack is empty. As the following
 class Solution {
 public:
-    vector<int> inorderTraversal(TreeNode* root) {
-        vector<int> ans;
+    vector<int> inorderTraversal(TreeNode* root){ 
+        if(root==NULL)
+           return {};
+        vector<int> vec;
         stack<TreeNode*> s;
-        TreeNode* curr = root;
-        while(curr || !s.empty()){
-            while(curr){
-                s.push(curr);
-                curr = curr->left;
+        while(true){
+            if(root!=NULL){
+               s.push(root);
+               root=root->left; 
             }
-            curr = s.top();
-            s.pop();
-            ans.push_back(curr->val);
-            curr = curr->right;
+            else{
+                if(s.empty())
+                    break;
+                root=s.top();
+                s.pop();
+                vec.push_back(root->val);
+                root=root->right;
+            }
         }
-        return ans;
+        return vec;
     }
 };
 
